@@ -661,7 +661,7 @@ class AWSAuthConnection(object):
                     sys.version[:3] in ('2.6', '2.7')) and port == 443:
                 signature_host = self.host
             else:
-                signature_host = '%s:%d' % (self.host, port)
+                signature_host = '%s' % (self.host)
         return signature_host
 
     def handle_proxy(self, proxy, proxy_port, proxy_user, proxy_pass):
